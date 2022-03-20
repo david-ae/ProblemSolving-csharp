@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "SH1VqsPS15RlMOF5+TQ8R6DCLHgHow2lUkEA2EPOenaWvn4XR4QgrTypZ8iUN0PVXK5BsY45b1iRRK5fn45big==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\david\\source\\repos\\TestAlgorithms\\TestAlgorithms\\TestAlgorithms.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\david\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.12\\microsoft.netcore.app.host.win-x64.5.0.12.nupkg.sha512"
+  ],
+  "logs": []
+}
