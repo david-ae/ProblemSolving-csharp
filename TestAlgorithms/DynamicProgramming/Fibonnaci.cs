@@ -10,6 +10,8 @@ namespace TestAlgorithms.DynamicProgramming
 	public class Fibonnaci
 	{
 		private static Dictionary<int, int> memo = new Dictionary<int, int>();
+
+		// recursive version
 		public static int Fib(int number)
 		{
 			if (memo.ContainsKey(number)) return memo[number];

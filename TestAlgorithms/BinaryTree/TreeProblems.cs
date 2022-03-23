@@ -171,18 +171,5 @@ namespace TestAlgorithms.BinaryTree
 
 			return minValue;
 		}
-
-		public int RecursiveTreeMin(Node root)
-		{
-			if (root == null) return 0;
-			var leftMin = RecursiveTreeMin(root.left);
-			var rightMin = RecursiveTreeMin(root.right);
-			return Math.Min(root.value, Math.Min(leftMin, rightMin));
-		}
-
-		//public int RecursiveMaxPathSum(Node root)
-		//{
-
-		//}
 	}
 }

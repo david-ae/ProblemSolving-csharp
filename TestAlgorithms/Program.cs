@@ -1,7 +1,10 @@
-﻿using System;
+﻿using AlgorithmsNDatastructures.DynamicProgramming;
+using System;
+using System.Collections.Generic;
 using TestAlgorithms.Algorithms;
 using TestAlgorithms.BinaryTree;
 using TestAlgorithms.DynamicProgramming;
+using TestAlgorithms.Graph;
 
 namespace TestAlgorithms
 {
@@ -9,7 +12,12 @@ namespace TestAlgorithms
 	{
 		static void Main(string[] args)
 		{
-			//Sorting.QuickSort(new int[] { 10, 17, 14, 20, 21, 22, 7, 8, 8, 5 });
+			//var result = Sorting.QuickSort(new int[] { 10, 17, 14, 20, 21, 22, 7, 8, 8, 5 });
+			LongestIncreasingSubsequence seq = new LongestIncreasingSubsequence();
+			var result = Sorting.BubbleSort(new int[] { 10, 17, 14, 20, 21, 22, 7, 8, 8, 5, 4, 20, 21, 20, 21, 22, 7, 8, 10, 17, 14, 20, 21, 22, 7, 8, 8, 5, 4, 20, 21, 20, 21, 22, 7, 8, 10, 17, 14, 20, 21, 22, 7, 8, 8, 5, 4, 20, 21, 20, 21, 22, 7, 8, 10, 17, 14, 20, 21, 22, 7, 8, 8, 5, 4, 20, 21, 20, 21, 22, 7, 8, 10, 17, 14, 20, 21, 22, 7, 8, 8, 5, 4, 20, 21, 20, 21, 22, 7, 8, 10, 17, 14, 20, 21, 22, 7, 8, 8, 5, 4, 20, 21, 20, 21, 22, 7, 8, 10, 17, 14, 20, 21, 22, 7, 8, 8, 5, 4, 20, 21, 20, 21, 22, 7, 8, 10, 17, 14, 20, 21, 22, 7, 8, 8, 5, 4, 20, 21, 20, 21, 22, 7, 8, 10, 17, 14, 20, 21, 22, 7, 8, 8, 5, 4, 20, 21, 20, 21, 22, 7, 8, 10, 17, 14, 20, 21, 22, 7, 8, 8, 5, 4, 20, 21, 20, 21, 22, 7, 8, 10, 17, 14, 20, 21, 22, 7, 8, 8, 5, 4, 20, 21, 20, 21, 22, 7, 8, 10, 17, 14, 20, 21, 22, 7, 8, 8, 5, 4, 20, 21, 20, 21, 22, 7, 8, 10, 17, 14, 20, 21, 22, 7, 8, 8, 5, 4, 20, 21, 20, 21, 22, 7, 8 });
+			//var numbers = new int[] { 70, 17, 24, 20, 21, 22, 7, 8, 8, 5 };
+			//Sorting.BinarySearch(numbers, 0, numbers.Length-1, 3);
+			//var arr = Sorting.MergeSort(numbers);
 			//Console.WriteLine(Fibonnaci.Fib(7));
 
 			//var a = new Node("a");
@@ -40,7 +48,27 @@ namespace TestAlgorithms
 			//var result = treeProblems.TreeSumDepthFirst(a);
 			//var result = treeProblems.TreeSumBreadthFirst(a);
 			//var result = treeProblems.TreeSumRecursive(a);
-			var result = treeProblems.RecursiveTreeMin(a);
+			//var result = treeProblems.RecursiveTreeMin(a);
+
+			Dictionary<string, string[]> graph = new Dictionary<string, string[]>();
+			//graph["a"] = new string[] {"b", "c"};
+			//graph["b"] = new string[] { "d" };
+			//graph["c"] = new string[] { "e" };
+			//graph["d"] = new string[] { "f" };
+			//graph["e"] = new string[] {};
+			//graph["f"] = new string[] {};
+
+			graph["f"] = new string[] { "g", "i" };
+			graph["g"] = new string[] { "h" };
+			graph["h"] = new string[] { };
+			graph["i"] = new string[] { "g", "k" };
+			graph["j"] = new string[] { "i" };
+			graph["k"] = new string[] { };
+
+			Graphs graphObject = new Graphs();
+			//graphObject.DepthFirst(graph, "a");
+			//graphObject.RecursiveDepthFirst(graph, "a");
+			Console.WriteLine(graphObject.HasPathBreadthFirst(graph, "j", "i"));
 		}
 	}
 }
